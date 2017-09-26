@@ -17,6 +17,8 @@ class Recipe():
 class RecipeItem():
     def create_recipeItem():
         pass
+    def read_recipeItem():
+        pass
     def update_recipeItem():
         pass
     def delete_recipeItem():
