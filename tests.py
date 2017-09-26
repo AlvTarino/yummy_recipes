@@ -17,4 +17,4 @@ class TestRecipe(unittest.TestCase):
 
     def delete_from_list(self):
         self.mylist.delete_from_list("blanket")
-        self.assertEqual(self.mylist.lst, ['wine'], msg="Item not Added")
+        self.assertEqual(self.mylist.lst, ['Fried-cassava'], msg="Item not Added")
