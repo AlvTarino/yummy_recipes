@@ -9,6 +9,8 @@ class Recipe():
         pass
     def read_recipe():
         pass
+    def add_recipe():
+        pass
     def update_recipe():
         pass
     def delete_recipe():
