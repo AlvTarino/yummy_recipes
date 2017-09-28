@@ -51,21 +51,16 @@ def after_login():
     return wrap
 
     return render_template("login.html")
-"""
-@app.route("/index")
+
+@app.route("/index")  #Route to main page after login
 def index():
-    #@app.route('/index')
-    @after_login
-    #def index():
-
-        #Route to main page after login
-
+    #@after_login
     recipe_new = user.recipes
     return render_template('index.html', recipe_new=recipe_new)
 
     #return render_template("index.html")
     #return redirect(url_for('login'))
-"""
+
 @app.route('/add_item/<recipe_name>', methods=['GET', 'POST'])  #Route enables user to add recipe item
 #@after_login
 def add_item(recipe_name):
