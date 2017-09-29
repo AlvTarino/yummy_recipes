@@ -50,7 +50,7 @@ class User (object):
         items = list(items)
         if recipe_name in self.recipes.keys():
             for item in items:
-                if item not in self.recipes[recipes_name]:
+                if item not in self.recipes[recipe_name]:
                     self.recipes[recipe_name].append(item)
         else:
             if recipe_name not in self.recipes:

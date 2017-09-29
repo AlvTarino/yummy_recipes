@@ -61,9 +61,11 @@ def index():
     #return render_template("index.html")
     #return redirect(url_for('login'))
 
-@app.route('/add_item/<recipe_name>', methods=['GET', 'POST'])  #Route enables user to add recipe item
+#@app.route('/add_item/<string:recipe_name>', methods=['GET', 'POST'])
+@app.route('/add_item', methods=['GET', 'POST'])  #Route enables user to add recipe item
 @after_login
-def add_item(recipe_name):
+#def add_item(recipe_name):
+def add_item():
     error = None
     if request.method == 'POST':
         recipe_name = request.form['recipe_name']
@@ -73,7 +75,8 @@ def add_item(recipe_name):
         if recipe_name and items:
             user.update_recipeItem(recipe_name, items)
             return redirect(url_for('item', recipe_name=recipe_name))
-    return render_template('add_item.html', recipe_name=recipe_name, error=error)
+    #return render_template('add_item.html', recipe_name=recipe_name, error=error)
+    return render_template('add_item.html', error=error)
 
 @app.route('/item/<recipe_name>')
 @after_login
@@ -94,7 +97,8 @@ def updatelistitem(recipe_name, item_name):
         if recipe_name and item_name:
             user.update_recipe(recipe_name, item_name, new_name)
             return redirect(url_for('item', recipe_name=recipe_name, item_name=item_name))
-    return render_template('updatelistitem.html', recipe_name=recipe_name, item_name=item_name)
+    #return render_template('updatelistitem.html', recipe_name=recipe_name, item_name=item_name)
+    return render_template('updatelistitem.html', item_name=item_name)
 
 
 @app.route('/delete_list/<recipe_name>') #Route enables user to delete recipe

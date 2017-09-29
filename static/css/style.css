@@ -73,7 +73,8 @@ header .right ul {
 #content {
   clear: both;
   background: url(../imgs/back3.jpg) no-repeat right;
-  background-position: 512px 0px;
+  /*background-position: 512px 0px;*/
+  background-position: 686px 117px;
   height: 522px;
   padding: 20px 0;
    }
@@ -131,7 +132,7 @@ header .right ul {
   padding: 35px 10px;
   background: #fff;
   position: relative;
-  top: 140px;
+  left: 140px;
  }
   #login h2, #login p, #signup h2, #signup p {
     text-align: center; }

@@ -10,35 +10,34 @@
         <div class="left"><h1>Yummy Recipes</h1></div>
             <div class="right">
                 <ul>
-                    <li><a href="#">Welcome</a></li>
+                    <li><a href="/index">Welcome</a></li>
                     <li><a href="/logout">Logout</a></li>
                 </ul>
-        </div>
+            </div>
     </header>
     </div>
     <div id='center'>
 	<section id="content-item">
-				<h2>Your {{list_name}} List Items</h2>
-				<ul class="list">
-				{% for item in items%}
-					<li><a class="item">{{ item }}</a><a class="side" href="/updatelistitem/{{list_name}}/{{ item }}">edit</a><a class="side" href="/delete/{{list_name}}/{{ item }}">delete</a></li>
-				{% endfor %}
-			</ul>
-           <div class="add">
-               <p><a href="/add_item/{{list_name}}">Add Item</a></p>
-               <p><a href="/index">Back</a></p>
+        <h2>Your {{recipe_name}} Items</h2>
+        <ul class="list">
+            {% for item in items%}
+            <li><a class="item">{{ item }}</a><a class="side" href="/updatelistitem/{{recipe_name}}/{{ item }}">edit</a><a class="side" href="/delete_list/{{recipe_name}}/{{ item }}">delete</a></li>
+			{% endfor %}
+		</ul>
+        <div class="add">
+            <p><a href="{{ url_for('add_item') }}">Add Item</a></p>
+            <p><a href="/index">Back</a></p>
         </div>
-
-</section>
-
+    </section>
     </div>
-<footer id="footer">
-		<div id="center">
-			<div class="text-center">
-				<p>Copyright &copy; 2017 - <a href="#home">Yummy recipes</a> | All Rights Reserved</p>
-			</div>
-		</div>
-	</footer>
+
+    <footer id="footer">
+            <div id="center">
+                <div class="text-center">
+                    <p>Copyright &copy; 2017 - <a href="/index">Yummy recipes</a> | All Rights Reserved</p>
+                </div>
+            </div>
+    </footer>
 
 </body>
 </html>

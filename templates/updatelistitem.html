@@ -18,26 +18,34 @@
     </div>
     <div id='center'>
 	<section id="content-add" >
-        <h2>Update list item</h2>
-				<form id="add" name="login" method="POST" action="">
+		<h2>Update Recipe-list</h2>
+		<!--<form id="signup" class="signup" action="/signup" name="signup" method="POST">-->
+				<form id="signup" class="signup" name="signup" method="POST" action="{{ url_for('updatelistitem') }}">
 					<!--{% if error %}
 					<p class=error><strong>Error:</strong>{{ error }}</p>
 					{% endif %}-->
 						<p>Back to lists<a href="/index"> Click here</a></p>
-						<input type="text" name='list_name' placeholder="list name" value="" readonly="readonly"/>
-						<input type="text" name='item_name' placeholder="item name"value="" readonly="readonly"/>
-						<input type="text" name='new_item_name' placeholder="new Recipe name"/>
+						<input type="text" name='recipe_name' placeholder="recipe_name" value="" />
+						<input type="text" name='item' placeholder="item name"value="" />
+						<input type="text" name='new_item_name' placeholder="New Recipe name"/>
 						<input id="btn" type="submit" value="update"/>
 				</form>
-</section>
-    </div>
-<footer id="footer">
+	</section>
+	</div>
+	<footer id="footer">
+		<div id="center">
+			<div class="text-center">
+				<p>Copyright &copy; 2017 - <a href="/logout">Yummy recipe</a> | All Rights Reserved</p>
+			</div>
+		</div>
+	</footer>
+<!--<footer id="footer">
 		<div id="center">
 			<div class="text-center">
 				<p>Copyright &copy; 2017 - <a href="#home">Yummy Recipe</a> | All Rights Reserved</p>
 			</div>
 		</div>
-	</footer>
+	</footer>-->
 
 </body>
 </html>

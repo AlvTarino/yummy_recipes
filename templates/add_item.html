@@ -18,15 +18,15 @@
     </div>
     <div id='center'>
 	<section id="content" >
-		<h2>Add a Yummy Recipe item</h2>
-				<form id="signup" class="signup" action="/signup" name="signup" method="POST">
+		<h2>Add a Yummy Recipe</h2>
+				<form id="signup" class="signup" action="{{ url_for('add_item') }}" name="signup" method="POST">
 				<!--<form id="add" name="login" method="POST" action="">
 					{% if error %}
 					<p class=error><strong>Error:</strong>{{ error }}</p>
 					{% endif %}-->
 						<p>Back to Recipes<a href="/index"> Click here</a></p>
-						<input type="text" name='recipe_name' placeholder="recipe name" value="" readonly="readonly"/>
-						<input type="text" name='items' placeholder="items"/>
+						<input type="text" name='recipe_name' placeholder="Recipe name" value=""/>
+						<input type="text" name='items' placeholder="Items" value=""/>
 						<input id="btn" type="submit" value="add"/>
 				</form>
 	</section>
