@@ -19,20 +19,25 @@
     <div id='center'>
 	<section id="content" >
 		<!--<form id="signup" class="signup" action="/add_item,updatelistitem" name="signup" method="POST">-->
-        <h2>Your recipe</h2>
-				<ul class="list">
+        <h2>Your recipes</h2>
+        <ul class="list">
+                {% for index in recipe_new%}
+                <!--<li><a class="item">{{ item }}</a><a class="side" href="/updatelistitem/{{recipe_name}}/{{ item }}">edit</a><a class="side" href="/delete_list/{{recipe_name}}/{{ item }}">delete</a></li>-->
+                <li><a class="index">{{ index }}</a>  <a class="side" href="/itemz/{{index}}">edit</a> <a class="side" href="/delete_list/{{recipe_name}}">delete</a></li>
+                {% endfor %}
+            </ul>
+				<!--<ul class="list">
 					<li>recipe 1</li>
 					<li>recipe 2</li>
 					<li>recipe 4</li>
 					<li>recipe 5</li>
 					<li>recipe 6</li>
 
-			</ul>
+			</ul>-->
 		<!--</form>-->
         <div class="add">
                <p><a href="{{ url_for('add_item') }}">Add recipe</a></p>
-							 <p><a href="#">Update Recipe</a></p>
-                             <p><a href="#">Delete Recipe</a></p>
+							 
                             
         </div>
 </section>

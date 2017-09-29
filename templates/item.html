@@ -17,11 +17,12 @@
     </header>
     </div>
     <div id='center'>
-	<section id="content-item">
+	<section id="content">
         <h2>Your {{recipe_name}} Items</h2>
         <ul class="list">
-            {% for item in items%}
-            <li><a class="item">{{ item }}</a><a class="side" href="/updatelistitem/{{recipe_name}}/{{ item }}">edit</a><a class="side" href="/delete_list/{{recipe_name}}/{{ item }}">delete</a></li>
+            {% for itemz in items%}
+            <!--<li><a class="item">{{ item }}</a><a class="side" href="/updatelistitem/{{recipe_name}}/{{ item }}">edit</a><a class="side" href="/delete_list/{{recipe_name}}/{{ item }}">delete</a></li>-->
+            <li><a class="itemz">{{ itemz }}</a><a class="side" ></a> <a class="side" href="/delete_listitem/{{recipe_name}}/{{itemz}}">delete</a></li>
 			{% endfor %}
 		</ul>
         <div class="add">

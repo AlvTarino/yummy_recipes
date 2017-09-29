@@ -74,16 +74,16 @@ def add_item():
 
         if recipe_name and items:
             user.update_recipeItem(recipe_name, items)
-            return redirect(url_for('item', recipe_name=recipe_name))
+            return redirect(url_for('itemz', recipe_name=recipe_name))
     #return render_template('add_item.html', recipe_name=recipe_name, error=error)
     return render_template('add_item.html', error=error)
 
-@app.route('/item/<recipe_name>')
+@app.route('/itemz/<recipe_name>')
 @after_login
-def item(recipe_name):
+def itemz(recipe_name):
     items = user.read_recipe(recipe_name)
     return render_template('item.html', items=items, recipe_name=recipe_name)
-
+"""
 @app.route('/updatelistitem/<recipe_name>/<item_name>', methods=['GET', 'POST'])      #Route enables user to edit recipe item
 @after_login
 def updatelistitem(recipe_name, item_name):
@@ -93,20 +93,36 @@ def updatelistitem(recipe_name, item_name):
         item_name = request.form['item_name']
         new_name = request.form['new_item_name']
         flash("You have succesfully added a recipe {} {} {}".format(recipe_name, item_name, new_name))
-
+        
         if recipe_name and item_name:
-            user.update_recipe(recipe_name, item_name, new_name)
-            return redirect(url_for('item', recipe_name=recipe_name, item_name=item_name))
+            #user.update_recipe(recipe_name, item_name, new_name)
+            #return redirect(url_for('itemz', recipe_name=recipe_name, item_name=item_name))
     #return render_template('updatelistitem.html', recipe_name=recipe_name, item_name=item_name)
     return render_template('updatelistitem.html', item_name=item_name)
-
+"""
 
 @app.route('/delete_list/<recipe_name>') #Route enables user to delete recipe
 @after_login
 def delete_list(recipe_name):
     user.delete_recipe(recipe_name)
     return redirect(url_for('index'))
-    return render_template('index.html')
+    return render_template('index.html', recipe_name=recipe_name)
+
+@app.route('/edit_recipe/<recipe_name>') #Route enables user to update recipe
+@after_login
+def edit_recipe(recipe_name):
+    recipe_new = user.recipes
+    #user.update_recipe(recipe_name)
+    #return redirect(url_for('itemz'))
+    return render_template('item.html', recipe_name=recipe_name, recipe_new=recipe_new)
+
+
+@app.route('/delete_listitem/<recipe_name>/<itemz>') #Route enables user to delete recipe item
+@after_login
+def delete_listitem(recipe_name, itemz):
+    user.delete_recipeItem(recipe_name, itemz)
+    return redirect(url_for('index'))
+    return render_template('index.html', recipe_name=recipe_name, itemz=itemz)
 
 @app.route('/logout')   #Route logs out user from the site
 def logout():
