@@ -38,7 +38,6 @@ class User (object):
         else:
             return "Recipe name doesn't exist"
         return self.recipes
-
         #pass
     def delete_recipe(self, recipe_name):   #deletes recipe
         if recipe_name in self.recipes.keys():
@@ -46,10 +45,7 @@ class User (object):
         else:
             return 'Recipe name does not exist in the system'
         return self.recipes
-
         #pass
-
-
     def update_recipeItem(self, recipe_name, *items):      #method adds recipe list items
         items = list(items)
         if recipe_name in self.recipes.keys():
@@ -60,7 +56,6 @@ class User (object):
             if recipe_name not in self.recipes:
                 for item in items:
                     self.recipes[recipe_name] = [item for item in items]
-
         #pass
     def delete_recipeItem(self, recipe_name, item):       #method deletes  recipe item in a recipe
 

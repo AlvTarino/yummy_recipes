@@ -10,14 +10,15 @@
         <div class="left"><h1>Yummy recipe</h1></div>
             <div class="right">
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="/logout">Logout</a></li>
                 </ul>
         </div>
     </header>
     </div>
     <div id='center'>
 	<section id="content" >
+		<!--<form id="signup" class="signup" action="/add_item,updatelistitem" name="signup" method="POST">-->
         <h2>Your recipe</h2>
 				<ul class="list">
 					<li>recipe 1</li>
@@ -27,9 +28,11 @@
 					<li>recipe 6</li>
 
 			</ul>
+		<!--</form>-->
         <div class="add">
-               <p><a href="#">Add recipe</a></p>
-							  <p><a href="#">Update Recipe</a></p>
+               <p><a href="/add_item">Add recipe</a></p>
+							 <p><a href="/updatelistitem">Update Recipe</a></p>
+							 <p><a href="/updatelistitem">Delete Recipe</a></p>
         </div>
 </section>
     </div>

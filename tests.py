@@ -1,5 +1,5 @@
 import unittest
-from yummy_classes import User,Recipe,RecipeItem
+from yummy_classes import User
 
 class TestYummy(unittest.TestCase):
 
