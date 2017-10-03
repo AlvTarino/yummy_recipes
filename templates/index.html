@@ -23,8 +23,10 @@
         <ul class="list">
                 {% for index in recipe_new%}
                 <!--<li><a class="item">{{ item }}</a><a class="side" href="/updatelistitem/{{recipe_name}}/{{ item }}">edit</a><a class="side" href="/delete_list/{{recipe_name}}/{{ item }}">delete</a></li>-->
-                <li><a class="index">{{ index }}</a>  <a class="side" href="/itemz/{{index}}">edit</a> <a class="side" href="/delete_list/{{recipe_name}}">delete</a></li>
-                {% endfor %}
+                <!--<li><a class="index">{{ index }}</a>  <a class="side" href="/itemz/{{index}}">edit</a> <a class="side" href="/delete_list/{{recipe_name}}">delete</a></li>-->
+								<li><a class="index">{{ index }}</a>  <a class="side" href="/itemz/{{index}}">edit</a> <a class="side" href="/delete_list/{{index}}">delete</a></li>
+
+					      {% endfor %}
             </ul>
 				<!--<ul class="list">
 					<li>recipe 1</li>
@@ -36,9 +38,9 @@
 			</ul>-->
 		<!--</form>-->
         <div class="add">
-               <p><a href="{{ url_for('add_item') }}">Add recipe</a></p>
-							 
-                            
+               <p><a href="{{ url_for('add_newrecipe') }}">Add recipe</a></p>
+
+
         </div>
 </section>
     </div>

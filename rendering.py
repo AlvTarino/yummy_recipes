@@ -62,10 +62,28 @@ def index():
     #return redirect(url_for('login'))
 
 #@app.route('/add_item/<string:recipe_name>', methods=['GET', 'POST'])
-@app.route('/add_item', methods=['GET', 'POST'])  #Route enables user to add recipe item
+@app.route('/add_newrecipe', methods=['GET', 'POST'])  #Route enables user to add recipe item
 @after_login
 #def add_item(recipe_name):
-def add_item():
+def add_newrecipe():
+    error = None
+    if request.method == 'POST':
+        recipe_name = request.form['recipe_name']
+        items = request.form['items']
+        flash("You have succesfully added your recipe {} {}".format(recipe_name, items))
+
+        if recipe_name and items:
+            #user.update_recipeItem(recipe_name, items)
+            user.create_recipe(recipe_name, items)
+            return redirect(url_for('index'))
+            #return redirect(url_for('itemz', recipe_name=recipe_name))
+    #return render_template('add_item.html', recipe_name=recipe_name, error=error)
+    return render_template('add_newrecipe.html', error=error)
+
+@app.route('/add_newrecipeItem/<recipe_name>', methods=['GET', 'POST'])  #Route enables user to add recipe item
+@after_login
+#def add_item(recipe_name):
+def add_newrecipeItem(recipe_name):
     error = None
     if request.method == 'POST':
         recipe_name = request.form['recipe_name']
@@ -76,7 +94,9 @@ def add_item():
             user.update_recipeItem(recipe_name, items)
             return redirect(url_for('itemz', recipe_name=recipe_name))
     #return render_template('add_item.html', recipe_name=recipe_name, error=error)
-    return render_template('add_item.html', error=error)
+    return render_template('add_newrecipeItem.html',recipe_name=recipe_name, error=error)
+    #return render_template('add_newrecipeItem.html', error=error)
+
 
 @app.route('/itemz/<recipe_name>')
 @after_login
@@ -93,7 +113,7 @@ def updatelistitem(recipe_name, item_name):
         item_name = request.form['item_name']
         new_name = request.form['new_item_name']
         flash("You have succesfully added a recipe {} {} {}".format(recipe_name, item_name, new_name))
-        
+
         if recipe_name and item_name:
             #user.update_recipe(recipe_name, item_name, new_name)
             #return redirect(url_for('itemz', recipe_name=recipe_name, item_name=item_name))

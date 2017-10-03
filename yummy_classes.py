@@ -31,17 +31,17 @@ class User (object):
     def update_recipe(self, recipe_name):   #updates a recipe
         if recipe_name in self.recipes.keys():
             for item in self.recipes[recipe_name]:
-                #if item == item_name:
-                self.recipes[recipe_name].remove(item)
-                    #self.recipes[recipe_name].append(new_name)
-                #else:
-                return 'Recipe not in the recipe list'
+                if item == item_name:
+                    self.recipes[recipe_name].remove(item)
+                    self.recipes[recipe_name].append(new_name)
+                else:
+                    return 'Recipe not in the recipe list'
         else:
             return "Recipe name doesn't exist"
         return self.recipes
         #pass
-    """
-    def update_recipe(self, recipe_name, item_name, new_name):   #updates a recipe
+
+    def update_nrecipe(self, recipe_name, item_name, new_name):   #updates a recipe
         if recipe_name in self.recipes.keys():
             for item in self.recipes[recipe_name]:
                 if item == item_name:
@@ -52,7 +52,7 @@ class User (object):
         else:
             return "Recipe name doesn't exist"
         return self.recipes
-    """    
+
     def delete_recipe(self, recipe_name):   #deletes recipe
         if recipe_name in self.recipes.keys():
             del self.recipes[recipe_name]
