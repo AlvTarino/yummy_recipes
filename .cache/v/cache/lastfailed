@@ -1,0 +1,12 @@
+{
+  "tests.py::TestYummy::test_add_recipe": true,
+  "tests.py::TestYummy::test_create": true,
+  "tests.py::TestYummy::test_emailaddress": true,
+  "tests.py::TestYummy::test_password": true,
+  "tests.py::TestYummy::test_registerUser": true,
+  "tests.py::TestYummy::test_update_recipe": true,
+  "tests.py::TestYummy::test_update_recipeItem": true,
+  "tests.py::TestYummy::test_updating_non_existing_recipe": true,
+  "tests.py::TestYummy::test_updating_non_existing_recipeItem": true,
+  "tests.py::TestYummy::test_username": true
+}

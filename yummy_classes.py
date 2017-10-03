@@ -3,6 +3,7 @@ import sys
 
 class User (object):
     def __init__(self):
+        #self.recipes = recipes
         self.recipes = {}
 
 #class Recipe():      #creates recipe and allows users to add a recipe item or multiple recipe items to the recipe

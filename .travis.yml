@@ -1,13 +1,20 @@
-language: python
+language: 
+- python
+
+cache:
+- pip
+
 python:
- - "3.5"
-install: 
- - "pip install -r requirements.txt"
- - "pip install coveralls"
-env:
- - COVERAGE_FILE=".coverage" FLASK_APP="rendering.py" SECRET="the-development-key-secret-hide-very-far" APP_SETTINGS="testing"
-script: sh -c 'cd ./newFlask/ && coverage run -m --source=app unittest discover test && coverage report'
-notifications:
-  webhooks: ! 'https://coveralls.io/webhook?repo_token=%{$COVERALLS_REPO_TOKEN}'
+- "3.6"
+
+install:
+- pip install coverage
+- pip install coveralls
+- pip install -r requirements.txt
+
+script:
+- nosetests tests/tests.py
+
 after_success:
-- coveralls'
+- coverage report
+- coveralls
