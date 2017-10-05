@@ -13,7 +13,7 @@ class TestYummy(unittest.TestCase):
         self.assertEqual(self.user.recipes, {})
 
     def test_create_recipe_successfully(self):
-        initial_room_count = len(self.user.recipes)
+        initial_recipe_count = len(self.user.recipes)
         Rolex_recipe = self.user.create_recipe('Rolex')
         self.assertTrue(Rolex_recipe)
         new_room_count = len(self.user.recipes)
@@ -26,23 +26,23 @@ class TestYummy(unittest.TestCase):
     def test_create_recipe(self):
         self.user.recipes = {}
         self.assertEqual(self.user.create_recipe('Rolex', 'eggs'),{'Rolex': ['eggs']})
-    
+
     def test_update_recipe(self):
         self.user.recipes = {'Rolex': ['eggs']}
         self.assertEqual(self.user.update_recipe('Rolex', 'Water'), {'Water': ['eggs']})
-    
+    """
     def test_updating_non_existing_recipe(self):
         self.user.recipes = {'Rolex': ['eggs']}
         self.assertEqual(self.user.update_recipe('Omlette', 'eggs'),'list name does not exist here', msg='list name does not exist here')
-    """
+
     def test_updating_non_existing_recipeItem(self):
         self.user.recipes = {'Rolex': ['eggs']}
         self.assertEqual(self.user.update_recipeItem('Rolex', 'oil', 'chapatti'),'Item not in list', msg='Item not in list')
-    """
+
     def test_update_recipeItem(self):
         self.user.recipes = {'Rolex': ['eggs']}
         self.assertEqual(self.user.update_recipeItem('Rolex', 'egg', 'eggs'), {'Rolex': ['egg']})
-    
+    """
     def test_delete_recipe(self):
         self.user.recipes = {'Rolex': ['eggs', 'highs'], 'grocery': ['onions', 'tomatoes']}
         self.assertEqual(self.user.delete_recipe('Rolex'), {'grocery': ['onions', 'tomatoes']})

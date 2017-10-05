@@ -28,6 +28,17 @@ class User (object):
             return "Recipe name does not exist here"
         return self.recipes
         #pass
+
+    def update_recipe(self, recipe_name, new_name): #creates  new recipe name
+
+        if recipe_name in self.recipes.keys():
+            self.recipes[new_name] = self.recipes.pop(recipe_name)
+        else:
+            return "list name does not exist here"
+        return self.recipes
+
+
+    '''
     def update_recipe(self, recipe_name):   #updates a recipe
         if recipe_name in self.recipes.keys():
             for item in self.recipes[recipe_name]:
@@ -40,8 +51,8 @@ class User (object):
             return "Recipe name doesn't exist"
         return self.recipes
         #pass
-
-    def update_nrecipe(self, recipe_name, item_name, new_name):   #updates a recipe
+    '''
+    def update_nrecipe_item(self, recipe_name, item_name, new_name):   #updates a recipe item
         if recipe_name in self.recipes.keys():
             for item in self.recipes[recipe_name]:
                 if item == item_name:

@@ -1,0 +1,4 @@
+{
+  "tests.py::TestYummy::test_update_recipeItem": true,
+  "tests.py::TestYummy::test_updating_non_existing_recipeItem": true
+}

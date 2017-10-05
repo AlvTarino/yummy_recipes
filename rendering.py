@@ -17,7 +17,7 @@ def signup():
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
-        flash("You have succesfully been registered {} {}".format(name, password))
+        flash("You have been registered {} {}".format(name, password))
 
         if name and password:
             users[email] = password
@@ -36,7 +36,7 @@ def login():
             return redirect(url_for('index'))
     return render_template('login.html', error=error)
 
-    return render_template("signup.html")
+    # return render_template("signup.html")
 
 @app.route('/login')#, methods=['POST'])
 def after_login(test):
@@ -70,7 +70,7 @@ def add_newrecipe():
     if request.method == 'POST':
         recipe_name = request.form['recipe_name']
         items = request.form['items']
-        flash("You have succesfully added your recipe {} {}".format(recipe_name, items))
+        flash("You have added your recipe {} {}".format(recipe_name, items))
 
         if recipe_name and items:
             #user.update_recipeItem(recipe_name, items)
@@ -88,7 +88,7 @@ def add_newrecipeItem(recipe_name):
     if request.method == 'POST':
         recipe_name = request.form['recipe_name']
         items = request.form['items']
-        flash("You have succesfully added your recipe {} {}".format(recipe_name, items))
+        flash("You have added your yummy recipe items {} {}".format(recipe_name, items))
 
         if recipe_name and items:
             user.update_recipeItem(recipe_name, items)
@@ -103,10 +103,41 @@ def add_newrecipeItem(recipe_name):
 def itemz(recipe_name):
     items = user.read_recipe(recipe_name)
     return render_template('item.html', items=items, recipe_name=recipe_name)
-"""
-@app.route('/updatelistitem/<recipe_name>/<item_name>', methods=['GET', 'POST'])      #Route enables user to edit recipe item
+
+@app.route('/updaterecipe/<recipe_name>', methods=['GET', 'POST']) #Route enables user to edit recipe
 @after_login
-def updatelistitem(recipe_name, item_name):
+def updaterecipe(recipe_name):
+    error = None
+    if request.method == 'POST':
+        recipe_name = request.form['recipe_name']
+        new_name = request.form['new_name']
+        flash("You have changed your recipe name {} {}".format(recipe_name, new_name))
+
+        if recipe_name and new_name:
+            user.update_recipe(recipe_name, new_name)
+            return redirect(url_for('index',recipe_name=recipe_name))
+    return render_template('updaterecipe.html',recipe_name=recipe_name)
+
+@app.route('/updaterecipeitem/<recipe_name>/<item_name>', methods=['GET', 'POST'])     #Route enables user to edit recipe item
+@after_login
+def updaterecipeitem(recipe_name, item_name):
+    error = None
+    if request.method == 'POST':
+        recipe_name = request.form['recipe_name']
+        item_name = request.form['item_name']
+        new_name = request.form['new_item_name']
+        flash("You have succesfully modified your items {} {} {}".format(recipe_name, item_name, new_name))
+
+        if recipe_name and item_name:
+            user.update_nrecipe_item(recipe_name, item_name, new_name)
+            return redirect(url_for('itemz', recipe_name=recipe_name, item_name=item_name))
+    return render_template('updatelistitem.html', recipe_name=recipe_name, item_name=item_name)
+
+
+"""
+@app.route('/updaterecipeitem/<recipe_name>/<item_name>', methods=['GET', 'POST'])      #Route enables user to edit recipe item
+@after_login
+def updaterecipeitem(recipe_name, item_name):
     error = None
     if request.method == 'POST':
         recipe_name = request.form['recipe_name']

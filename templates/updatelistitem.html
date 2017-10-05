@@ -3,14 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Yummy Recipe |Update</title>
-	<link href="../static/css/style.css" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
 </head>
 <body>
     <div class="header-wrapper"><header id="navigation">
         <div class="left"><h1>Yummy Recipe</h1></div>
             <div class="right">
                 <ul>
-                    <li><a href="#">HOME </a></li>
+                    <li><a href="/index">HOME </a></li>
                     <li><a href="/logout">Logout</a></li>
                 </ul>
         </div>
@@ -20,15 +20,16 @@
 	<section id="content-add" >
 		<h2>Update Recipe-list</h2>
 		<!--<form id="signup" class="signup" action="/signup" name="signup" method="POST">-->
-				<form id="signup" class="signup" name="signup" method="POST" action="{{ url_for('updatelistitem') }}">
+
 					<!--{% if error %}
 					<p class=error><strong>Error:</strong>{{ error }}</p>
 					{% endif %}-->
+				<form id="add" name="login" method="POST" action="">
 						<p>Back to lists<a href="/index"> Click here</a></p>
-						<input type="text" name='recipe_name' placeholder="recipe_name" value="" />
-						<input type="text" name='item' placeholder="item name"value="" />
-						<input type="text" name='new_item_name' placeholder="New Recipe name"/>
-						<input id="btn" type="submit" value="update"/>
+						<input type="text" name='recipe_name' placeholder="recipe_name" value="{{recipe_name}}" readonly="readonly" />
+						<input type="text" name='item' placeholder="item name"value="{{item_name}}" readonly="readonly" />
+						<input type="text" name='new_item_name' placeholder="New Item name"/>
+						<input id="btn" type="submit" value="Change"/>
 				</form>
 	</section>
 	</div>

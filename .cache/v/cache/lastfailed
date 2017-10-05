@@ -1,4 +1,5 @@
 {
+  "tests.py": true,
   "tests.py::TestYummy::test_add_recipe": true,
   "tests.py::TestYummy::test_create": true,
   "tests.py::TestYummy::test_emailaddress": true,
