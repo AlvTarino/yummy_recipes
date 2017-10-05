@@ -2,36 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f373bce1-4a27-4d90-805d-6179e214812a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-extrabold-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-extrabold-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-extrabold-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-extrabold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-light-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-light-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-light-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-light-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-regular-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-regular-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-regular-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-regular-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-semibold-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-semibold-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-semibold-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/fonts/opensans-semibold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/imgs/back1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/imgs/back2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/imgs/back3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/signup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/wirefame designs/3006757aa1af45f784692b5ae41fce9f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/wirefame designs/97ee60d39944303bd1a37cabf21cbb0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/wirefame designs/f1e2a88091504115b88ceff31ecae7cf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wirefame designs/3006757aa1af45f784692b5ae41fce9f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wirefame designs/97ee60d39944303bd1a37cabf21cbb0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wirefame designs/f1e2a88091504115b88ceff31ecae7cf.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/distribute-0.6.14.tar.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/updaterecipe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/.cache/v/cache/lastfailed" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/distribute_setup.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.env" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instance/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instance/config.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.cache/v/cache/lastfailed" afterPath="$PROJECT_DIR$/.cache/v/cache/lastfailed" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rendering.py" afterPath="$PROJECT_DIR$/rendering.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/item.html" afterPath="$PROJECT_DIR$/templates/item.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/updatelistitem.html" afterPath="$PROJECT_DIR$/templates/updatelistitem.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/tests.py" afterPath="$PROJECT_DIR$/tests/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yummy_classes.py" afterPath="$PROJECT_DIR$/yummy_classes.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,25 +27,38 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="yummy_classes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yummy_classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+              <folding>
+                <marker date="1507188660375" expanded="true" signature="57:66" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rendering.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rendering.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rendering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+            <state relative-caret-position="17">
+              <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
+                <marker date="1507188581350" expanded="true" signature="284:285" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recipeList_items.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recipeList_items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,7 +66,7 @@
       <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../2COPY/Arthuur/ShoppingList-master/ShoppingList-master/models/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="1360">
               <caret line="80" column="55" lean-forward="false" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="55" />
               <folding />
             </state>
@@ -117,6 +114,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -131,7 +129,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,6 +196,35 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/yummy_classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <marker date="1507188660375" expanded="true" signature="57:66" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../2COPY/Arthuur/ShoppingList-master/ShoppingList-master/models/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="55" lean-forward="false" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rendering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <marker date="1507188581350" expanded="true" signature="284:285" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/designs/signup.html" />
     <entry file="file://$USER_HOME$/Downloads/distribute_setup.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -209,7 +235,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../2COPY/Arthuur/ShoppingList-master/ShoppingList-master/models/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="1360">
           <caret line="80" column="55" lean-forward="false" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="55" />
           <folding />
         </state>
@@ -219,7 +245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -227,35 +252,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../rendering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../rendering.py" />
     <entry file="file://$PROJECT_DIR$/yummy_classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <marker date="1507188660375" expanded="true" signature="57:66" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rendering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        <state relative-caret-position="17">
+          <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
+            <marker date="1507188581350" expanded="true" signature="284:285" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipeList_items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

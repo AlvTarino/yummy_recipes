@@ -118,21 +118,24 @@ def updaterecipe(recipe_name):
             return redirect(url_for('index',recipe_name=recipe_name))
     return render_template('updaterecipe.html',recipe_name=recipe_name)
 
-@app.route('/updaterecipeitem/<recipe_name>/<item_name>', methods=['GET', 'POST'])     #Route enables user to edit recipe item
+@app.route('/updaterecipeitem/<string:recipe_name>/<string:item_name>', methods=['GET', 'POST'])     #Route enables user to edit recipe item
 @after_login
 def updaterecipeitem(recipe_name, item_name):
+    """
     error = None
-    if request.method == 'POST':
-        recipe_name = request.form['recipe_name']
-        item_name = request.form['item_name']
-        new_name = request.form['new_item_name']
-        flash("You have succesfully modified your items {} {} {}".format(recipe_name, item_name, new_name))
+    # if request.method == 'POST':
+    recipe_name = request.form['recipe_name']
+    item_name = request.form['item_name']
+    new_name = request.form['new_item_name']
+    flash("You have succesfully modified your items {} {} {}".format(recipe_name, item_name, new_name))
 
         if recipe_name and item_name:
             user.update_nrecipe_item(recipe_name, item_name, new_name)
             return redirect(url_for('itemz', recipe_name=recipe_name, item_name=item_name))
+    """
     return render_template('updatelistitem.html', recipe_name=recipe_name, item_name=item_name)
 
+    # return "hello world"
 
 """
 @app.route('/updaterecipeitem/<recipe_name>/<item_name>', methods=['GET', 'POST'])      #Route enables user to edit recipe item
@@ -172,8 +175,8 @@ def edit_recipe(recipe_name):
 @after_login
 def delete_listitem(recipe_name, itemz):
     user.delete_recipeItem(recipe_name, itemz)
-    return redirect(url_for('index'))
-    return render_template('index.html', recipe_name=recipe_name, itemz=itemz)
+    return redirect(url_for('itemz', recipe_name=recipe_name))
+    return render_template('item.html', recipe_name=recipe_name, itemz=itemz)
 
 @app.route('/logout')   #Route logs out user from the site
 def logout():

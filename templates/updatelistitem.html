@@ -24,7 +24,7 @@
 					<!--{% if error %}
 					<p class=error><strong>Error:</strong>{{ error }}</p>
 					{% endif %}-->
-				<form id="add" name="login" method="POST" action="">
+				<form id="add" name="login" method="POST" action="{{ url_for('updaterecipeitem', recipe_name=recipe_name, item_name=item_name) }}">
 						<p>Back to lists<a href="/index"> Click here</a></p>
 						<input type="text" name='recipe_name' placeholder="recipe_name" value="{{recipe_name}}" readonly="readonly" />
 						<input type="text" name='item' placeholder="item name"value="{{item_name}}" readonly="readonly" />
